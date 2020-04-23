@@ -8,8 +8,9 @@ module.exports.handler = async (evt, ctx) => {
 	const id = evt.pathParameters.id;
 
 	const schema = Joi.object().keys({
-		title: Joi.string().required(),
-		published: Joi.boolean().required()
+		accountNumberFormatted: Joi.string().required(),
+		accountStatus: Joi.string().required(),
+		customerNumber: Joi.number().greater(1000000)
 	});
 
 	const { error, value } = Joi.validate(data, schema);

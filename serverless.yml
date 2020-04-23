@@ -46,6 +46,13 @@ functions:
       - http:
           path: accounts
           method: get
+  createAccount: 
+    handler: src/accounts/create.handler
+    events:
+      - http:
+          method: POST
+          path: /accounts
+          
 resources:
   Resources:
     JobsDynamoDBTable:

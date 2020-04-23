@@ -9,7 +9,7 @@ module.exports.handler = async (evt, ctx) => {
 			.promise();
 		return {
 			statusCode: 200,
-			body: JSON.stringify(results)
+			body: JSON.stringify(results.Items)
 		};
 	} catch (err) {
 		return {

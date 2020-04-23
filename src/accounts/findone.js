@@ -5,7 +5,7 @@ module.exports.handler = async (evt, ctx) => {
 	try {
 		const results = await dynamoDB
 			.get({
-				TableName: process.env.JOBS_TABLE,
+				TableName: process.env.ACCOUNTS_TABLE,
 				Key: {
 					id
 				}
